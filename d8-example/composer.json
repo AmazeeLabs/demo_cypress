@@ -1,13 +1,14 @@
 {
-    "name": "drupal/recommended-project",
-    "description": "Project template for Drupal 8 projects with a relocated document root",
+    "name": "drupal/d8-cypress-demo",
+    "description": "Project template for Drupal 8 projects with cypress.",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "homepage": "https://www.drupal.org/project/drupal",
-    "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
-    },
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
     "repositories": [
         {
             "type": "composer",
@@ -16,10 +17,13 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
-        "drush/drush": "^10.2"
+        "drupal/cypress": "^1.0@beta",
+        "drush/drush": "^9.0",
+        "vlucas/phpdotenv": "^4.1"
     },
     "require-dev": {
     },
@@ -31,12 +35,37 @@
     "config": {
         "sort-packages": true
     },
+    "autoload": {
+      "classmap": [
+        "scripts/composer/ScriptHandler.php"
+      ],
+      "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
     "extra": {
         "drupal-scaffold": {
+          "initial": {
+               ".editorconfig": "../.editorconfig",
+               ".gitattributes": "../.gitattributes"
+           },
             "locations": {
                 "web-root": "web/"
             }
         },
+        "composer-exit-on-patch-failure": true,
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
