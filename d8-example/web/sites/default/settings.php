@@ -124,7 +124,7 @@ if (getenv('LAGOON_ROUTES')) {
   );
 } else {
   $settings['trusted_host_patterns'] = [
-    '^using-drupal.docker.amazee.io$',
+    '^d8-drupal-cypress.docker.amazee.io$',
     '^127.0.0.1$',
     '^localhost$',
   ];
@@ -140,7 +140,7 @@ if (getenv('LAGOON')) {
   $settings['hash_salt'] = hash('sha256', getenv('LAGOON_PROJECT'));
 }
 else {
-  $settings['hash_salt'] = hash('sha256', 'using-drupal');
+  $settings['hash_salt'] = hash('sha256', 'd8-drupal');
 }
 
 // Settings for all environments.
