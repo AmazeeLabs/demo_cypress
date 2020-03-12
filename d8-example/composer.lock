@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "deac9ad5857b3e074bab53f3cff19e56",
+    "content-hash": "e4685d4807be05d232cf6899b4430fcf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1934,42 +1934,6 @@
                 "GPL-2.0-or-later"
             ],
             "description": "A flexible Composer project scaffold builder.",
-            "homepage": "https://www.drupal.org/project/drupal",
-            "keywords": [
-                "drupal"
-            ]
-        },
-        {
-            "name": "drupal/core-project-message",
-            "version": "8.8.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core-project-message.git",
-                "reference": "10be18c6a401de8e243777de6a74cb45a7ecacad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-project-message/zipball/10be18c6a401de8e243777de6a74cb45a7ecacad",
-                "reference": "10be18c6a401de8e243777de6a74cb45a7ecacad",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.1",
-                "php": ">=7.0.8"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Drupal\\Composer\\Plugin\\ProjectMessage\\MessagePlugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Drupal\\Composer\\Plugin\\ProjectMessage\\": "."
-                }
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "Adds a message after Composer installation.",
             "homepage": "https://www.drupal.org/project/drupal",
             "keywords": [
                 "drupal"
