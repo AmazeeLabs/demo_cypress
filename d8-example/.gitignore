@@ -28,3 +28,6 @@ web/sites/*/services.local.yml
 
 # Ignore Node.js files.
 node_modules
+
+# Cypress module
+/web/drupal-cypress-environment

@@ -1,5 +1,7 @@
 FROM amazeeio/php:7.2-cli-drupal as builder
 
+RUN apk add --no-cache xvfb
+
 COPY composer.json composer.lock load.environment.php package.json yarn.lock /app/
 COPY scripts /app/scripts
 COPY patches /app/patches

@@ -1,7 +1,7 @@
 {
   "name": "d8-example",
   "version": "1.0.0",
-  "description": "``` 1. dup 2. ssh in and composer install 3. drush site:install ```",
+  "description": "Cypress playground",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
