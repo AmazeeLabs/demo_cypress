@@ -1,0 +1,15 @@
+{
+  "baseUrl": "http://d8-drupal-cypress.docker.amazee.io",
+  "ignoreTestFiles": ["*.php"],
+  "env": {
+    "baseUrl": ""
+  },
+  "testFiles": "**/*.{feature,features}",
+  "chromeWebSecurity": false,
+  "projectId": "d8demoCypress",
+  "defaultCommandTimeout": 7000,
+  "responseTimeout": 60000,
+  "viewportHeight": 1280,
+  "viewportWidth": 1024,
+  "videoUploadOnPasses": false
+}

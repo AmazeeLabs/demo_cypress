@@ -1,0 +1,20 @@
+{
+  "name": "cypress_npm",
+  "version": "1.0.0",
+  "description": "Cypress using npm",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@testing-library/cypress": "^6.0.0",
+    "cypress": "^4.2.0",
+    "cypress-cucumber-preprocessor": "^2.0.1",
+    "cypress-file-upload": "^3.3.4",
+    "cypress-screenplay": "^0.1.0",
+    "cypress-shadow-dom": "^1.0.0"
+  }
+}

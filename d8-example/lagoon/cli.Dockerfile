@@ -10,6 +10,10 @@ RUN yarn install --pure-lockfile
 COPY . /app
 RUN rm -rf /app/node_modules
 
+COPY __tests__ /app/__tests__
+RUN npm install
+RUN rm -rf /app/__tests__/node_modules
+
 # Config directory should be non-writable.
 RUN chmod 755 /app/web/sites/default && chmod 644 /app/web/sites/default/*
 
