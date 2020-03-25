@@ -1,13 +1,6 @@
 /// <reference types="Cypress" />
 const { Given, When, Then, But } = require('cypress-cucumber-preprocessor/steps');
 
-const index = (user, pass) => () => {
-    cy.visit('/user/login');
-    cy.get('#edit-name').type(user);
-    cy.get('#edit-pass').type(pass);
-    cy.get('form.user-login-form #edit-submit').click();
-};
-
 // Scenario: Homepage is viewable in Spanish
 Given(/^I am on the homepage$/, () => {
     cy.visit('/');

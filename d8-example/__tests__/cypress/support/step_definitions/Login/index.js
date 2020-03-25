@@ -2,14 +2,6 @@
 /// <reference types="Cypress" />
 const { Given, When, Then, But } = require('cypress-cucumber-preprocessor/steps');
 
-// beforeEach(function () {
-//     cy.prepareSnapshot('login-preparations', function () {
-//         cy.drush('en toolbar');
-//         cy.drush('cr');
-//     });
-//     cy.drupalSession({ toolbar: 'on' });
-// });
-
 const index = (user, pass) => () => {
     cy.visit('/user/login');
     cy.get('#edit-name').type(user);
