@@ -12,9 +12,32 @@ or use db dump
 
 ## Using '\/__test\__' directory
 
+Outside containers...
+
 cd __tests__
 
 yarn install
+
+
+## Running Cypress
+
+$(npm bin)/cypress run
+
+or ... 
+
+./node_modules/.bin/cypress open
+
+or ...
+
+npx cypress run
+
+
+or you can use the custom npm commands...
+npm run cypress:run
+
+npm run cypress:open
+
+
 
 
 ## Using the Cypress module
@@ -22,3 +45,4 @@ yarn install
 drush en cypress -y
 
 drush cypress:run
+
